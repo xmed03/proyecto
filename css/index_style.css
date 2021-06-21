@@ -1,0 +1,230 @@
+/*INICIO BODY: la página home ocupará sólo el viewport*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+#body__video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+/*INICIO HEADER: el header está conformado por el logo y el header__nav*/
+
+#header{
+    position: relative;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    box-sizing: border-box;
+}
+
+    /*header__logo: elemento flotante*/
+
+#header__logo{
+    position: absolute;
+    height: 70px;
+    width: 170px;
+    background-image: url("../img/index/1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+    /*header__nav: elemento flex*/
+
+.header{
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.header__nav{
+    padding: 10px 40px 10px 40px;
+    box-sizing: border-box;
+}
+#header__nav__operaciones{
+    position: relative;
+    box-sizing: border-box;
+}
+#header__nav__operaciones__menu{
+    box-sizing: border-box;
+}
+#header__nav__operaciones__sub{
+    position: absolute;
+    transform: translateX(-40px);
+    box-sizing: border-box;
+    display: none;
+    margin-top: 10px;
+    color: black;
+    background-color: white;
+    opacity: 1;
+}
+.header__nav__operaciones__sub{
+    padding: 10px 40px 10px 40px;
+    box-sizing: border-box;
+}
+#header__nav__operaciones:hover{
+    background-color: rgb(87, 87, 87);
+    opacity: 0.8;
+}
+#header__nav__operaciones:hover > #header__nav__operaciones__sub{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/*FIN HEADER*/
+
+/*INICIO NAV: el nav va a estar compuesto por un menú main (desplegable) y un menú aside. Se debe clickear sobre el nav__menu para desplagar el manú main*/
+
+    /*nav__menu: elemento flotante*/
+
+#nav__menu{
+    position: absolute;
+    top: 15px;
+    left: calc(100vw - 80px);
+    height: 40px;
+    width: 40px;
+    background-color: rgb(87, 87, 87);
+    opacity: 0.8;
+    background-image: url("../img/index/2.png");
+    background-position: center center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    z-index: 2;
+    appearance: none;
+    border-radius: 50%;
+}
+    /*nav__main: elemento flotante; display flex*/
+
+#nav__main{
+    position: absolute;
+    top: 0px;
+    left: calc(100vw - 330px);
+    height: 100vh;
+    width: 330px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: end;
+    background-color: rgb(192, 192, 192);
+    opacity: 0.9;
+    z-index: 1;
+    visibility: hidden;
+    box-sizing: border-box;
+}
+.nav__main{
+    margin: 20px 35px 0px 0px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+#nav__main__home{
+    margin-top: 73px;
+    box-sizing: border-box;
+}
+#nav__menu:hover{
+    background-color: transparent;
+}
+#nav__menu:checked{
+    left: calc(100vw - 75px);
+    background-color: transparent;
+    background-image: url("../img/index/3.png");
+    background-position: center right;
+    border-radius: 0%;
+}
+#nav__menu:checked ~ #nav__main{
+    visibility: visible;
+}
+
+    /*nav__aside: elemento flotante; display flex. Cuando el menu__main se desplega, se ajusta su posición*/
+
+#nav__aside{
+    position: absolute;
+    top: 0px;
+    left: calc(100vw - 40px);
+    height: 100vh;
+    width: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: center;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.nav__aside{
+    background-position: center center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(87, 87, 87);
+    opacity: 0.8;
+    box-sizing: border-box;
+}
+#nav__menu:checked ~ #nav__aside{
+    left: calc(100vw - 370px);
+}
+#nav__aside__fb{
+    background-image: url("../img/index/4.png");
+}
+#nav__aside__tw{
+    background-image: url("../img/index/5.png");
+}
+#nav__aside__ig{
+    background-image: url("../img/index/6.png");
+}
+#nav__aside__in{
+    background-image: url("../img/index/7.png");
+}
+
+/*FIN NAV*/
+
+/*INICIO MAIN*/
+
+#main{
+    font-size: 40px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px; 
+}
+#main__h1{
+    background-color: white;
+    font-size: 40px;
+    margin: 0px;
+}
+#main__h2{
+    background-color: white;
+    font-size: 40px;
+    margin: 0px;
+}
+
+/*INICIO FOOTER: el footer es una línea negra al final de la página*/
+
+footer{
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: calc(100vh - 25px);
+    left: 0px;
+    height: 25px;
+    width: 100vw;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*FIN FOOTER*/
