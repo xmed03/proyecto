@@ -237,6 +237,9 @@ footer{
 /*MEDIA QUERYS*/
 
 @media only screen and (max-width: 600px) {
+    body {
+        color: red;
+    }
     .header{
         display: none;
     }
@@ -310,6 +313,9 @@ footer{
     }
 }
 @media only screen and (min-width: 600px) {
+    body {
+      color: blue;
+    }
     .header{
         display: none;
     }
@@ -383,6 +389,9 @@ footer{
     }
 }
 @media only screen and (min-width: 768px) {
+    body {
+        color: orange;
+    }
     #nav__main{
         left: calc(100vw - 330px);
         height: 100vh;
@@ -422,6 +431,9 @@ footer{
     }
 }
 @media only screen and (min-width: 992px) {
+    body {
+      color: green;
+    }
     #header{
         font-size: 12px;
     }
@@ -469,6 +481,9 @@ footer{
     }
 }
 @media only screen and (min-width: 1200px) {
+    body {
+      color: pink;
+    }
     #header{
         font-size: 15px;
     }
